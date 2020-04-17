@@ -20,11 +20,13 @@ class Worker extends Thread {
                     queueHelper.addToError(document);
                     Thread.currentThread().interrupt();
                 }
-            }break;
+            }
+            break;
             case 2: {
                 document.setTask_status(TaskTypes.COMPLETED);
                 Thread.currentThread().interrupt();
-            }break;
+            }
+            break;
         }
         if (document.getTask_status() != TaskTypes.ERROR) {
             document.setTask_status(TaskTypes.COMPLETED);

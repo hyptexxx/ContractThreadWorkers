@@ -31,5 +31,6 @@ public class Main {
         for (Document document : documents) {
             System.out.println(document.getId() + "\t" + document.getTask_status());
         }
+        System.out.println(Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory());
     }
 }
